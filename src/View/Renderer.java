@@ -1,3 +1,6 @@
+package View;
+
+import Model.Level;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 

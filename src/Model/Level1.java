@@ -1,3 +1,5 @@
+package Model;
+
 public class Level1 extends Level {
 
     public Level1(double screenWidth, double screenHeight) {

@@ -1,14 +1,20 @@
-/**
- * Item : champignon.
- * 
- * Ramasser un champignon permet de gagner le niveau actuel
- */
-public class Mushroom extends Item {
+package Model;
 
-    public Mushroom(double x, double y) {
+import View.ImageRenderer;
+
+/**
+ * Model.Item : Model.Potion magique.
+ * 
+ * Fait changer la sorcière de couleur
+ */
+public class Potion extends Item {
+
+    private boolean used = false;
+
+    public Potion(double x, double y) {
         super(x, y);
 
-        this.renderer = new ImageRenderer("mushroom", this);
+        this.renderer = new ImageRenderer("potion", this);
     }
 
     @Override
@@ -18,22 +24,25 @@ public class Mushroom extends Item {
 
     @Override
     public double getWidth() {
-        return 64;
+        return 48;
     }
 
     @Override
     public double getHeight() {
-        return 64;
+        return 48;
     }
 
     @Override
     public void handleCollision(Player player, Game game) {
-        game.win();
+        used = true;
+        this.renderer = new ImageRenderer("empty-potion", this);
+        player.randomizeColor();
     }
 
     @Override
     public boolean intersects(Player player) {
-        return player.getX() < this.getX() + this.getWidth() / 2
+        return !used
+                && player.getX() < this.getX() + this.getWidth() / 2
                 && player.getX() > this.getX() - this.getWidth() / 2
                 && player.getY() < this.getY() + this.getHeight() / 2
                 && player.getY() > this.getY() - this.getHeight() / 2;

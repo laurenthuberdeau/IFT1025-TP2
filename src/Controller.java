@@ -1,3 +1,7 @@
+import Model.Entity;
+import Model.Game;
+import Model.Level;
+
 import java.util.List;
 
 /**

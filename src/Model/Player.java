@@ -1,3 +1,7 @@
+package Model;
+
+import View.PlayerRenderer;
+
 /**
  * Classe représentant l'entité de la personne qui joue (aka, la sorcière).
  *

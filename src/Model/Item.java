@@ -1,3 +1,5 @@
+package Model;
+
 /**
  * Classe abstraite représentant un item (powerup/champignon/...)
  */

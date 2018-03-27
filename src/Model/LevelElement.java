@@ -1,3 +1,5 @@
+package Model;
+
 /**
  * Éléments qui composent un niveau.
  *
