@@ -5,7 +5,7 @@ import Model.Square;
 import javafx.scene.canvas.GraphicsContext;
 
 /**
- * Fait le rendu d'un Model.Square en dessinant un carré coloré sur l'écran.
+ * Fait le rendu d'un Square en dessinant un carré coloré sur l'écran.
  */
 public class SquareRenderer extends Renderer {
 

@@ -6,7 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 /**
- * Fait le rendu d'une Model.Entity sur l'écran en affichant une image
+ * Fait le rendu d'une Entity sur l'écran en affichant une image
  */
 public class ImageRenderer extends Renderer {
 

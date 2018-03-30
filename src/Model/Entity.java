@@ -5,7 +5,7 @@ import View.Renderer;
 /**
  * Classe abstraite pour représenter une entité sur le jeu.
  *
- * Une entité possède minimalement un View.Renderer et une position (x, y) définie
+ * Une entité possède minimalement un Renderer et une position (x, y) définie
  * par rapport au niveau (où y=0 est tout en bas).
  */
 public abstract class Entity {

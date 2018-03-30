@@ -5,7 +5,7 @@ import Model.Player;
 import javafx.scene.canvas.GraphicsContext;
 
 /**
- * Fait le rendu d'un Model.Player sur l'écran en dessinant un cercle coloré
+ * Fait le rendu d'un Player sur l'écran en dessinant un cercle coloré
  */
 public class PlayerRenderer extends Renderer {
 

@@ -3,7 +3,7 @@ package Model;
 import View.SquareRenderer;
 
 /**
- * Model.Obstacle simple : un carré qui change de couleur à toutes les 2 secondes.
+ * Obstacle simple : un carré qui change de couleur à toutes les 2 secondes.
  */
 public class Square extends Obstacle {
 

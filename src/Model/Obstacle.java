@@ -22,6 +22,6 @@ public abstract class Obstacle extends LevelElement {
      */
     @Override
     public void handleCollision(Player player, Game game) {
-        game.loose();
+        game.lose();
     }
 }
