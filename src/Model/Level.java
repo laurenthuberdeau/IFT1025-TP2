@@ -89,4 +89,6 @@ public abstract class Level {
 
         return entities;
     }
+
+    abstract public int getLevelIndex();
 }

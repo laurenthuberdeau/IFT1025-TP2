@@ -73,9 +73,8 @@ public class Game {
      * @return les entités à afficher à l'écran
      */
     public List<Entity> getEntities() {
-        List<Entity> entities = new ArrayList<>();
 
-        entities.addAll(level.getEntities());
+        List<Entity> entities = new ArrayList<>(level.getEntities());
         entities.add(player);
 
         return entities;
@@ -89,13 +88,11 @@ public class Game {
         player.jump();
     }
 
-    public void loose() {
-        System.out.println("You loose... Too bad !");
+    public void lose() {
         this.gameOver = true;
     }
 
     public void win() {
-        System.out.println("You win !");
         this.hasWon = true;
         this.gameOver = true;
     }

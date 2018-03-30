@@ -23,6 +23,7 @@ public class Controller {
     /**
      * Fonction appelée à chaque frame du jeu.
      * @param dt Delta-temps exprimé en secondes
+     * @return if game
      */
     public void tick(double dt) {
         if (this.game.isGameOver()) {
@@ -45,5 +46,13 @@ public class Controller {
      */
     public void spaceTyped() {
         this.game.jump();
+    }
+
+    public boolean gameIsOver() {
+        return this.game.isGameOver();
+    }
+
+    public boolean gameHasWon() {
+        return this.game.hasWon();
     }
 }

@@ -27,4 +27,9 @@ public class Level1 extends Level {
 
         victoryMushroom = new Mushroom(screenWidth / 2, 3.5 * screenHeight);
     }
+
+    @Override
+    public int getLevelIndex() {
+        return 1;
+    }
 }
