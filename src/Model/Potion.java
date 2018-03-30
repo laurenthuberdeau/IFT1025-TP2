@@ -1,6 +1,8 @@
 package Model;
 
 import View.ImageRenderer;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 
 /**
  * Model.Item : Model.Potion magique.
@@ -33,6 +35,15 @@ public class Potion extends Item {
     }
 
     @Override
+    public Shape getShape() {
+        return new Rectangle(
+                getX()  - getWidth() / 2,
+                getY()  - getWidth() / 2,
+                getWidth(),
+                getHeight());
+    }
+
+    @Override
     public void handleCollision(Player player, Game game) {
         used = true;
         this.renderer = new ImageRenderer("empty-potion", this);
@@ -41,10 +52,6 @@ public class Potion extends Item {
 
     @Override
     public boolean intersects(Player player) {
-        return !used
-                && player.getX() < this.getX() + this.getWidth() / 2
-                && player.getX() > this.getX() - this.getWidth() / 2
-                && player.getY() < this.getY() + this.getHeight() / 2
-                && player.getY() > this.getY() - this.getHeight() / 2;
+        return !used & super.intersects(player);
     }
 }

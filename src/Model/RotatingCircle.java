@@ -1,6 +1,8 @@
 package Model;
 
 import View.RotatingCircleRenderer;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Shape;
 
 /**
  * Obstacle simple : un cercle tournant autour d'un point
@@ -23,7 +25,7 @@ public class RotatingCircle extends Obstacle {
         this.renderer = new RotatingCircleRenderer(this);
 
         this.circleRadius = circleRadius;
-        this.pathRadius = pathRadius;
+        this.pathRadius = pathRadius  - circleRadius / 2;
 
         this.color = (int) (Math.random() * 4);
     }
@@ -50,6 +52,11 @@ public class RotatingCircle extends Obstacle {
         return super.getY() + Math.sin(radian) * pathRadius;
     }
 
+    @Override
+    public Shape getShape() {
+        return new Circle(getX(), getY(), getCircleRadius());
+    }
+
     public double getCircleRadius() {
         return this.circleRadius;
     }
@@ -74,7 +81,7 @@ public class RotatingCircle extends Obstacle {
 
     @Override
     public boolean intersects(Player player) {
-        // todo: Complete here
-        return false;
+        return this.color != player.getColor()
+                && super.intersects(player);
     }
 }

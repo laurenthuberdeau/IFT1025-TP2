@@ -1,5 +1,7 @@
 package Model;
 
+import javafx.scene.shape.Shape;
+
 /**
  * Éléments qui composent un niveau.
  *
@@ -12,7 +14,12 @@ public abstract class LevelElement extends Entity {
         super(x, y);
     }
 
-    public abstract boolean intersects(Player player);
+    public boolean intersects(Player player) {
+        // todo : À optimiser. Utilise 100% du UI thread.
+        return !Shape.intersect(player.getShape(), getShape())
+                .getBoundsInLocal()
+                .isEmpty();
+    }
 
     public abstract void handleCollision(Player player, Game game);
 }

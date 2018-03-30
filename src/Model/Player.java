@@ -1,6 +1,8 @@
 package Model;
 
 import View.PlayerRenderer;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Shape;
 
 /**
  * Classe représentant l'entité de la personne qui joue (aka, la sorcière).
@@ -85,5 +87,10 @@ public class Player extends Entity {
     @Override
     public double getHeight() {
         return this.getRadius() * 2;
+    }
+
+    @Override
+    public Shape getShape() {
+        return new Circle(getX(), getY(), getRadius());
     }
 }

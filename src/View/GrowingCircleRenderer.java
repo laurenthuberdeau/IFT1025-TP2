@@ -23,8 +23,8 @@ public class GrowingCircleRenderer extends Renderer {
         context.setFill(Renderer.convertColor(circle.getColor()));
 
         context.fillOval(
-                circle.getX(),
-                canvasY,
+                circle.getX() - circle.getCurrentRadius(),
+                canvasY - circle.getCurrentRadius(),
                 circle.getCurrentRadius() * 2,
                 circle.getCurrentRadius() * 2);
     }

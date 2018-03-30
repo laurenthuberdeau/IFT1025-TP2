@@ -1,6 +1,8 @@
 package Model;
 
 import View.AnimationRenderer;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 
 /**
  * Model.Item : champignon.
@@ -34,15 +36,16 @@ public class Mushroom extends Item {
     }
 
     @Override
-    public void handleCollision(Player player, Game game) {
-        game.win();
+    public Shape getShape() {
+        return new Rectangle(
+                getX()  - getWidth() / 2,
+                getY()  - getWidth() / 2,
+                getWidth(),
+                getHeight());
     }
 
     @Override
-    public boolean intersects(Player player) {
-        return player.getX() < this.getX() + this.getWidth() / 2
-                && player.getX() > this.getX() - this.getWidth() / 2
-                && player.getY() < this.getY() + this.getHeight() / 2
-                && player.getY() > this.getY() - this.getHeight() / 2;
+    public void handleCollision(Player player, Game game) {
+        game.win();
     }
 }

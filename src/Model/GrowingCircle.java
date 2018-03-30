@@ -1,6 +1,8 @@
 package Model;
 
 import View.GrowingCircleRenderer;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Shape;
 
 /**
  * Obstacle simple : un cercle qui change de couleur et qui grossit.
@@ -36,13 +38,8 @@ public class GrowingCircle extends Obstacle {
     }
 
     @Override
-    public double getX() {
-        return super.getX() - currentRadius;
-    }
-
-    @Override
-    public double getY() {
-        return super.getY() + currentRadius;
+    public Shape getShape() {
+        return new Circle(getX(), getY(), currentRadius);
     }
 
     public double getCurrentRadius() {
@@ -72,14 +69,7 @@ public class GrowingCircle extends Obstacle {
 
     @Override
     public boolean intersects(Player player) {
-        if (player.getColor() == this.getColor())
-            return false;
-
-        double distance = Math.pow(player.getX() - super.getX(), 2)
-                        + Math.pow(player.getY() - super.getY(), 2);
-
-        double minDistance = Math.pow(player.getRadius() + this.getCurrentRadius(), 2);
-
-        return distance <= minDistance;
+        return this.color != player.getColor()
+                && super.intersects(player);
     }
 }

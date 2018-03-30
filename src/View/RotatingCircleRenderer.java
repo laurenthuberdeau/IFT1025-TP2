@@ -23,8 +23,8 @@ public class RotatingCircleRenderer extends Renderer {
         context.setFill(Renderer.convertColor(circle.getColor()));
 
         context.fillOval(
-                circle.getX() - circle.getCircleRadius() / 2,
-                canvasY,
+                circle.getX() - circle.getCircleRadius(),
+                canvasY - circle.getCircleRadius(),
                 circle.getCircleRadius() * 2,
                 circle.getCircleRadius() * 2);
     }

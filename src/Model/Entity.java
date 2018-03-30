@@ -1,6 +1,7 @@
 package Model;
 
 import View.Renderer;
+import javafx.scene.shape.Shape;
 
 /**
  * Classe abstraite pour représenter une entité sur le jeu.
@@ -18,10 +19,20 @@ public abstract class Entity {
         this.y = y;
     }
 
+    /**
+     * Donne la position en x du coin haut gauche.
+     *
+     * @return Composante horizontale
+     */
     public double getX() {
         return x;
     }
 
+    /**
+     * Donne la position en y du coin haut gauche.
+     *
+     * @return Composante verticale
+     */
     public double getY() {
         return y;
     }
@@ -47,4 +58,6 @@ public abstract class Entity {
      * @param dt Delta-Temps en secondes
      */
     public abstract void tick(double dt);
+
+    public abstract Shape getShape();
 }

@@ -1,6 +1,8 @@
 package Model;
 
 import View.SquareRenderer;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 
 /**
  * Obstacle simple : un carré qui change de couleur à toutes les 2 secondes.
@@ -30,6 +32,15 @@ public class Square extends Obstacle {
     }
 
     @Override
+    public Shape getShape() {
+        return new Rectangle(
+                getX()  - getWidth() / 2,
+                getY()  - getWidth() / 2,
+                getWidth(),
+                getHeight());
+    }
+
+    @Override
     public void tick(double dt) {
         timeSinceColorChange += dt;
 
@@ -46,9 +57,6 @@ public class Square extends Obstacle {
     @Override
     public boolean intersects(Player player) {
         return this.color != player.getColor()
-                && player.getX() < this.getX() + this.getWidth() / 2
-                && player.getX() > this.getX() - this.getWidth() / 2
-                && player.getY() < this.getY() + this.getHeight() / 2
-                && player.getY() > this.getY() - this.getHeight() / 2;
+                && super.intersects(player);
     }
 }

@@ -24,6 +24,10 @@ public class ImageRenderer extends Renderer {
         double x = entity.getX();
         double y = Renderer.computeScreenY(level, entity.getY());
 
-        context.drawImage(img, x - entity.getWidth() / 2, y - entity.getHeight() / 2, entity.getWidth(), entity.getHeight());
+        context.drawImage(img,
+                x - entity.getWidth() / 2,
+                y - entity.getHeight() / 2,
+                entity.getWidth(),
+                entity.getHeight());
     }
 }

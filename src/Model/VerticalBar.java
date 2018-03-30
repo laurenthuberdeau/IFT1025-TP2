@@ -1,6 +1,8 @@
 package Model;
 
 import View.VerticalBarRenderer;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 
 /**
  * Obstacle simple : une barre verticale allant de gauche à droite
@@ -45,8 +47,13 @@ public class VerticalBar extends Obstacle {
         return super.getX() + offset;
     }
 
-    public double getOffset() {
-        return offset;
+    @Override
+    public Shape getShape() {
+        return new Rectangle(
+                getX()  - getWidth() / 2,
+                getY()  - getHeight() / 2,
+                getWidth(),
+                getHeight());
     }
 
     @Override
@@ -64,9 +71,6 @@ public class VerticalBar extends Obstacle {
     @Override
     public boolean intersects(Player player) {
         return this.color != player.getColor()
-                && player.getX() < this.getX() + this.getWidth() / 2
-                && player.getX() > this.getX() - this.getWidth() / 2
-                && player.getY() < this.getY() + this.getHeight() / 2
-                && player.getY() > this.getY() - this.getHeight() / 2;
+                && super.intersects(player);
     }
 }
