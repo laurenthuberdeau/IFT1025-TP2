@@ -1,6 +1,6 @@
 package Model;
 
-import View.ImageRenderer;
+import View.AnimationRenderer;
 
 /**
  * Model.Item : champignon.
@@ -12,7 +12,10 @@ public class Mushroom extends Item {
     public Mushroom(double x, double y) {
         super(x, y);
 
-        this.renderer = new ImageRenderer("mushroom", this);
+        this.renderer = new AnimationRenderer("mushroom_animation",
+                26,
+                30,
+                this);
     }
 
     @Override
