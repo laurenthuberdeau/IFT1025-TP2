@@ -8,7 +8,11 @@ public class Level1 extends Level {
         double x = screenWidth / 2;
 
         // Création des obstacles
-        Square obstacle1 = new Square(x, 0.75 * screenHeight, 40);
+        Obstacle obstacle1 =
+                // new Square(x, 0.75 * screenHeight, 40);
+                // new GrowingCircle(x, 0.75 * screenHeight, screenWidth / 4);
+                // new VerticalBar(x, 0.75 * screenHeight, 20, 100, screenWidth / 2);
+                 new RotatingCircle(x, 0.75 * screenHeight, 30, screenWidth / 2);
         Square obstacle2 = new Square(x, 1.5 * screenHeight, 60);
         Square obstacle3 = new Square(x, 2.0 * screenHeight, 150);
         Square obstacle4 = new Square(x, 3 * screenHeight, 200);
