@@ -14,6 +14,7 @@ public class Player extends Entity {
     private double radius;
     private double vy;
     private double ay;
+    private double invincibilityTimer;
     private int color = 1;
 
     public Player(double x, double y, double r) {
@@ -23,6 +24,8 @@ public class Player extends Entity {
 
         this.vy = 0;
         this.ay = -400;
+
+        this.invincibilityTimer = 0;
 
         this.renderer = new PlayerRenderer(this);
     }
@@ -41,6 +44,7 @@ public class Player extends Entity {
     public void tick(double dt) {
         // Mise à jour de la vitesse
         vy += dt * ay;
+        //System.out.println("player vy "+vy);
 
         // Mise à jour de la position
         y += dt * vy;
@@ -48,6 +52,15 @@ public class Player extends Entity {
         // Clip la vitesse pour rester entre -300 et 300
         vy = Math.min(vy, 300);
         vy = Math.max(vy, -300);
+
+        if (invincibilityTimer > 0){
+            if (dt > invincibilityTimer){
+                invincibilityTimer = 0;
+            }
+            else{
+                invincibilityTimer -= dt;
+            }
+        }
     }
 
     public int getColor() {
@@ -75,8 +88,20 @@ public class Player extends Entity {
         vy += 200;
     }
 
+    public void setInvincibilityTimer(double invincibilityTimer){
+        this.invincibilityTimer = invincibilityTimer;
+    }
+
+    public boolean getInvincibility(){
+        return !(this.invincibilityTimer == 0);
+    }
+
     public void setY(double y) {
         this.y = y;
+    }
+
+    public void disappear() {
+        this.renderer = null;
     }
 
     @Override

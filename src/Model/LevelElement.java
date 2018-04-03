@@ -15,10 +15,14 @@ public abstract class LevelElement extends Entity {
     }
 
     public boolean intersects(Player player) {
-        // todo : À optimiser. Utilise 100% du UI thread.
-        return !Shape.intersect(player.getShape(), getShape())
-                .getBoundsInLocal()
-                .isEmpty();
+        if (player.getInvincibility()){
+            return false;
+        }
+        else{
+            // todo: vérifier si cette version est plus efficace que celle en commentaire
+            return player.getShape().intersects(this.getShape().getBoundsInParent());
+            // return !Shape.intersect(player.getShape(),getShape()).getBoundsInLocal().isEmpty();
+        }
     }
 
     public abstract void handleCollision(Player player, Game game);

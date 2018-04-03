@@ -20,7 +20,9 @@ public class PlayerRenderer extends Renderer {
 
         double canvasY = Renderer.computeScreenY(level, player.getY());
 
-        context.setFill(Renderer.convertColor(player.getColor()));
+        // affiche le joueur en blanc lorsqu'invincible
+        if (player.getInvincibility()) context.setFill(Renderer.convertColor(4));
+        else context.setFill(Renderer.convertColor(player.getColor()));
 
         context.fillOval(
                 player.getX() - player.getRadius(),

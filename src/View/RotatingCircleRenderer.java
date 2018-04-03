@@ -5,7 +5,7 @@ import Model.RotatingCircle;
 import javafx.scene.canvas.GraphicsContext;
 
 /**
- * Fait le rendu d'un VerticalBar en dessinant un rectangle coloré sur l'écran.
+ * Fait le rendu d'un RotatingCircle en dessinant un cercle coloré sur l'écran.
  */
 public class RotatingCircleRenderer extends Renderer {
 

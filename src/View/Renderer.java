@@ -29,6 +29,8 @@ public abstract class Renderer {
                 return Color.DODGERBLUE;
             case 3:
                 return Color.ORANGE;
+            case 4:
+                return Color.WHITESMOKE;
         }
 
         throw new IllegalArgumentException("Couleur inconnue");

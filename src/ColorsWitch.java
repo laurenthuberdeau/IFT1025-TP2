@@ -72,7 +72,10 @@ public class ColorsWitch extends Application {
                 List<Entity> entities = controller.getEntities();
 
                 for (Entity e : entities) {
-                    e.getRepresentation().draw(controller.getCurrentLevel(), context);
+                    // Permet aux objets de disparaitre de l'affichage lorsque leur représentation est "null"
+                    if (e.getRepresentation()!=null){
+                        e.getRepresentation().draw(controller.getCurrentLevel(), context);
+                    }
                 }
 
                 messageTextView.setVisible(now < lastGameOver + TEXT_TIMEOUT);

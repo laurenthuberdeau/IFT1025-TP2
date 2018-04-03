@@ -5,7 +5,7 @@ import Model.Level;
 import javafx.scene.canvas.GraphicsContext;
 
 /**
- * Fait le rendu d'un GrowingSquare en dessinant un cercle coloré sur l'écran.
+ * Fait le rendu d'un GrowingCircle en dessinant un cercle coloré sur l'écran.
  */
 public class GrowingCircleRenderer extends Renderer {
 
