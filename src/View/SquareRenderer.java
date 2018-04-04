@@ -11,6 +11,11 @@ public class SquareRenderer extends Renderer {
 
     private Square carre;
 
+    /**
+     * Constructeur de SquareRenderer
+     *
+     * @param c Entitée liée au renderer
+     */
     public SquareRenderer(Square c) {
         this.carre = c;
     }

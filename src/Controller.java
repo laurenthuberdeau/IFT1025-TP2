@@ -9,19 +9,27 @@ import java.util.List;
  */
 public class Controller {
 
+    // Permet au joueur de voir l'explosion de son cercle avant la nouvelle partie
+    private static double GAME_OVER_DELAY = 2;
+
     private Game game;
     private int level = 1;
 
-    // gameOverTimer allows player to see the witch explode into bouncingBalls before the new Game
     private double gameOverTimer;
-    private static double gameOverDelay = 2;
 
+    /**
+     * Contructeur de base
+     */
     public Controller() {
-
         this.game = new Game(ColorsWitch.WIDTH, ColorsWitch.HEIGHT, level);
         this.gameOverTimer = 0;
     }
 
+    /**
+     * Getter des entitées de jeu
+     *
+     * @return Liste d'entitées dans le jeu
+     */
     public List<Entity> getEntities() {
         return this.game.getEntities();
     }
@@ -38,7 +46,7 @@ public class Controller {
 
             gameOverTimer += dt;
 
-            if (gameOverTimer > gameOverDelay) {
+            if (gameOverTimer > GAME_OVER_DELAY) {
                 gameOverTimer = 0;
                 this.game = new Game(ColorsWitch.WIDTH, ColorsWitch.HEIGHT, level);
             }
@@ -46,6 +54,12 @@ public class Controller {
         this.game.tick(dt);
     }
 
+    /**
+     * Retourne le numéro du niveau.
+     * Simple getter game::getLevel
+     *
+     * @return Le numéro du niveau
+     */
     public Level getCurrentLevel() {
         return this.game.getLevel();
     }
@@ -57,10 +71,22 @@ public class Controller {
         this.game.jump();
     }
 
+    /**
+     * Retourne si la partie est terminée.
+     * Simple getter game::isGameOver
+     *
+     * @return Si la partie est terminée
+     */
     public boolean gameIsOver() {
         return this.game.isGameOver();
     }
 
+    /**
+     * Retourne si la partie est gagnée.
+     * Simple getter game::hasWon
+     *
+     * @return Si la partie est gagnée
+     */
     public boolean gameHasWon() {
         return this.game.hasWon();
     }

@@ -13,6 +13,12 @@ public class ImageRenderer extends Renderer {
     private Image img;
     private Entity entity;
 
+    /**
+     * Constructeur de BouncingBallRenderer
+     *
+     * @param name Chemin d'accès de l'image
+     * @param e Entitée liée au renderer
+     */
     public ImageRenderer(String name, Entity e) {
         img = new Image("/Images/" + name + ".png");
         this.entity = e;

@@ -5,7 +5,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
 /**
- * Model.Item : Model.Potion magique.
+ * Item : Potion magique.
  * 
  * Fait changer la sorcière de couleur
  */

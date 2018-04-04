@@ -35,6 +35,11 @@ public class ColorsWitch extends Application {
         launch(args);
     }
 
+    /**
+     * Point d'entrée de l'application JavaFX
+     *
+     * @param primaryStage Stage de la fenêtre principale
+     */
     @Override
     public void start(Stage primaryStage) {
         controller = new Controller();

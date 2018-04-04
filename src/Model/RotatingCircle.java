@@ -9,6 +9,7 @@ import javafx.scene.shape.Shape;
  */
 public class RotatingCircle extends Obstacle {
 
+    // Fréquence de l'oscillation
     static final private double frequency = 1/3f;
 
     private double circleRadius;
@@ -16,7 +17,10 @@ public class RotatingCircle extends Obstacle {
 
     private double radian = 0;
 
+    // Temps depuis la création de l'objet
     private double timeSinceStart = 0;
+
+    // Temps depuis le dernier changement de couleur
     private double timeSinceColorChange = 0;
 
     public RotatingCircle(double x, double y, double circleRadius, double pathRadius) {

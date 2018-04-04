@@ -59,5 +59,10 @@ public abstract class Entity {
      */
     public abstract void tick(double dt);
 
+    /**
+     * Retourne le collision box de l'entité
+     *
+     * @return Shape représentant le collision box de l'entité
+     */
     public abstract Shape getShape();
 }

@@ -11,6 +11,11 @@ public class VerticalBarRenderer extends Renderer {
 
     private VerticalBar bar;
 
+    /**
+     * Constructeur de VerticalBarRenderer
+     *
+     * @param c Entitée liée au renderer
+     */
     public VerticalBarRenderer(VerticalBar c) {
         this.bar = c;
     }

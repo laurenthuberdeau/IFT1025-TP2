@@ -9,7 +9,10 @@ import javafx.scene.shape.Shape;
  */
 public class Square extends Obstacle {
 
+    // Dimensions de l'objet
     private double width;
+
+    // Temps depuis le dernier changement de couleur
     private double timeSinceColorChange = 0;
 
     public Square(double x, double y, double longueur) {

@@ -11,6 +11,11 @@ public class RotatingCircleRenderer extends Renderer {
 
     private RotatingCircle circle;
 
+    /**
+     * Constructeur de RotationCircleRenderer
+     *
+     * @param c Entitée liée au renderer
+     */
     public RotatingCircleRenderer(RotatingCircle c) {
         this.circle = c;
     }

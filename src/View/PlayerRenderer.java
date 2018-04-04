@@ -11,6 +11,11 @@ public class PlayerRenderer extends Renderer {
 
     private Player player;
 
+    /**
+     * Constructeur de PlayerRenderer
+     *
+     * @param player Entitée liée au renderer
+     */
     public PlayerRenderer(Player player) {
         this.player = player;
     }

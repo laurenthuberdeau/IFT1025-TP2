@@ -11,6 +11,11 @@ public class GrowingCircleRenderer extends Renderer {
 
     private GrowingCircle circle;
 
+    /**
+     * Constructeur de GrowingCircleRenderer
+     *
+     * @param c Entitée liée au renderer
+     */
     public GrowingCircleRenderer(GrowingCircle c) {
         this.circle = c;
     }

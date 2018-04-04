@@ -25,6 +25,13 @@ public abstract class Obstacle extends LevelElement {
         game.lose();
     }
 
+    /**
+     * Détermine s'il y a collision entre this et player.
+     * Overridé pour ignorer les collisions si le joueur est invincible
+     *
+     * @param player Joueur
+     * @return Si le joueur rencontre l'objet
+     */
     @Override
     public boolean intersects(Player player){
         if (player.getInvincibility()){

@@ -9,15 +9,28 @@ import javafx.scene.shape.Shape;
  */
 public class GrowingCircle extends Obstacle {
 
+    // Fréquence de l'oscillation
     static final private double FREQUENCY = 1/3f;
+    // Rayon minimal de l'oscillation. Le ratio oscille entre MIN_RATIO * maxRadius et maxRadius
     static final private double MIN_RATIO = 0.2;
 
     private double currentRadius = 0;
 
     private double maxRadius;
+
+    // Temps depuis la création de l'objet
     private double timeSinceStart = 0;
+
+    // Temps depuis le dernier changement de couleur
     private double timeSinceColorChange = 0;
 
+    /**
+     * Constructeur de GrowingCircle
+     *
+     * @param x Position horizontale du centre de l'objet
+     * @param y Position verticale du centre de l'objet
+     * @param maxRadius Rayon maximal
+     */
     public GrowingCircle(double x, double y, double maxRadius) {
         super(x, y);
 

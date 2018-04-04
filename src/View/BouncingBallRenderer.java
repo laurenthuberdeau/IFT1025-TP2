@@ -9,8 +9,14 @@ import javafx.scene.canvas.GraphicsContext;
  */
 public class BouncingBallRenderer extends Renderer {
 
+    // Entitée à afficher
     private BouncingBall circle;
 
+    /**
+     * Constructeur de BouncingBallRenderer
+     *
+     * @param c Entitée liée au renderer
+     */
     public BouncingBallRenderer(BouncingBall c) {
         this.circle = c;
     }
