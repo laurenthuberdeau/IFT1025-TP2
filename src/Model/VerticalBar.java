@@ -64,10 +64,6 @@ public class VerticalBar extends Obstacle {
         offset = amplitude * Math.sin(timeSinceStart * period);
     }
 
-    public int getColor() {
-        return color;
-    }
-
     @Override
     public boolean intersects(Player player) {
         return this.color != player.getColor()

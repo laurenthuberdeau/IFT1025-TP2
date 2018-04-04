@@ -34,4 +34,13 @@ public abstract class Obstacle extends LevelElement {
             return super.intersects(player);
         }
     }
+
+    /**
+     * Getter de color
+     *
+     * @return this.color
+     */
+    public int getColor() {
+        return color;
+    }
 }

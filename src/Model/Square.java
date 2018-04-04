@@ -50,10 +50,6 @@ public class Square extends Obstacle {
         }
     }
 
-    public int getColor() {
-        return color;
-    }
-
     @Override
     public boolean intersects(Player player) {
         return this.color != player.getColor()
