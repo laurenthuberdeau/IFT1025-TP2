@@ -24,4 +24,14 @@ public abstract class Obstacle extends LevelElement {
     public void handleCollision(Player player, Game game) {
         game.lose();
     }
+
+    @Override
+    public boolean intersects(Player player){
+        if (player.getInvincibility()){
+            return false;
+        }
+        else{
+            return super.intersects(player);
+        }
+    }
 }

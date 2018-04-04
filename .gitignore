@@ -151,3 +151,9 @@ hs_err_pid*
 
 
 # End of https://www.gitignore.io/api/java,eclipse,intellij
+
+# For intelliJ 2018.1
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+IFT1025-TP2.iml

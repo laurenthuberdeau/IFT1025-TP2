@@ -23,7 +23,7 @@ public class Level2 extends Level {
         obstacles.add(obstacle6);
         obstacles.add(obstacle7);
 
-        victoryMushroom = new Mushroom(x, 4.50 * screenHeight);
+        victoryMushroom = new Mushroom(x, 3.25 * screenHeight);
     }
 
     @Override

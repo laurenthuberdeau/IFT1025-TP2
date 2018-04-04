@@ -37,7 +37,7 @@ public class Level3 extends Level {
         items.add(potion2);
         items.add(shield1);
 
-        victoryMushroom = new Mushroom(x, 5.00 * screenHeight);
+        victoryMushroom = new Mushroom(x, 4.50 * screenHeight);
     }
 
     @Override

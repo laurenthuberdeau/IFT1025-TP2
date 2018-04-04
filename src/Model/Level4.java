@@ -17,11 +17,9 @@ public class Level4 extends Level {
         obstacles.add(obstacle3);
 
         // Création des items
-        Shield shield1 = new Shield(x, 1.00 * screenHeight);
         Shield shield2 = new Shield(x, 2.50 * screenHeight);
         Shield shield3 = new Shield(x, 5.00 * screenHeight);
 
-        items.add(shield1);
         items.add(shield2);
         items.add(shield3);
 
