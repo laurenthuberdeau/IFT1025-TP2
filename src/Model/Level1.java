@@ -1,5 +1,8 @@
 package Model;
 
+/**
+ * Premier niveau du jeu, introduit les obstacles carrés et les potions
+ */
 public class Level1 extends Level {
 
     public Level1(double screenWidth, double screenHeight) {

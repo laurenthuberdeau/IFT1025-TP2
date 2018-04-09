@@ -1,5 +1,9 @@
 package Model;
 
+/**
+ * Sixième niveau. Il est intentionnellement insurmontable,
+ * car les niveaux supérieures à 6 n'existent pas dans cette version du jeu.
+ */
 public class Level6 extends Level {
 
     public Level6(double screenWidth, double screenHeight) {

@@ -7,13 +7,19 @@ import javafx.scene.shape.Shape;
 
 /**
  * Model.Item : Model.Shield.
- * <p>
+ *
  * Rend le joueur invulnerable aux collisions pendant quelques secondes
  */
 public class Shield extends Item {
 
     private boolean used = false;
 
+    /**
+     * Constructeur du shield, initialise renderer
+     *
+     * @param x Position horizontale
+     * @param y Position verticale
+     */
     public Shield(double x, double y) {
         super(x, y);
 
@@ -43,6 +49,10 @@ public class Shield extends Item {
                 getWidth() / 2);
     }
 
+    /**
+     * Une collision avec le shield rend le joueur invulnérable pour 3 secondes
+     * Le statut "used" et l'affichage du shield sont mis à jour.
+     */
     @Override
     public void handleCollision(Player player, Game game) {
         used = true;

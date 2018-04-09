@@ -29,6 +29,12 @@ public abstract class Level {
     protected List<Item> items;
     protected Mushroom victoryMushroom;
 
+    /**
+     * Constructeur du niveau.
+     *
+     * @param screenWidth Largeur de l'affichage
+     * @param screenHeight Hauteur de l'affichage
+     */
     public Level(double screenWidth, double screenHeight) {
         this.screenWidth = screenWidth;
         this.screenHeight = screenHeight;
@@ -37,26 +43,32 @@ public abstract class Level {
         items = new ArrayList<>();
     }
 
-    public double getScroll() {
-        return scroll;
-    }
+    /**
+     * Getter de scroll
+     *
+     * @return this.scroll
+     */
+    public double getScroll() { return scroll; }
 
-    public double getScreenWidth() {
-        return screenWidth;
-    }
+    /**
+     * Getter de screenWidth
+     *
+     * @return this.screenWidth
+     */
+    public double getScreenWidth() { return screenWidth; }
 
-    public double getScreenHeight() {
-        return screenHeight;
-    }
+    /**
+     * Getter de screenHeight
+     *
+     * @return this.screenHeight
+     */
+    public double getScreenHeight() { return screenHeight; }
 
-    public List<Obstacle> getObstacles() {
-        return obstacles;
-    }
-
-    public List<Item> getPowerUps() {
-        return items;
-    }
-
+    /**
+     * Fonction appelée à chaque frame pour mettre à jour les entités.
+     *
+     * @param dt Delta-Temps en secondes
+     */
     public void tick(double dt) {
         for (Obstacle o : obstacles) {
             o.tick(dt);
@@ -66,6 +78,11 @@ public abstract class Level {
         }
     }
 
+    /**
+     * Méthode qui permet de faire scroller la portion visible du niveau
+     *
+     * @param scroll L'incrément de position
+     */
     public void incrementScroll(double scroll) {
         this.scroll += scroll;
     }
@@ -90,5 +107,8 @@ public abstract class Level {
         return entities;
     }
 
+    /**
+     * Retourne l'entier qui représente le numéro du niveau
+     */
     abstract public int getLevelIndex();
 }

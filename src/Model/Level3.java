@@ -1,5 +1,9 @@
 package Model;
 
+/**
+ * Troisième niveau du jeu, introduit les obstacles de type GrowingCircle ainsi que Rotating Circle
+ * Introduit aussi le shield, qui est indispensable pour passer les obstacles 5-10.
+ */
 public class Level3 extends Level {
 
     public Level3(double screenWidth, double screenHeight) {

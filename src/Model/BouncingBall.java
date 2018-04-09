@@ -15,6 +15,13 @@ public class BouncingBall extends Entity {
     private double vx, vy, ay;
     private int color;
 
+    /**
+     * Constructeur de BouncingBall
+     *
+     * @param x Position horizontale du centre de l'objet
+     * @param y Position verticale du centre de l'objet
+     * @param r Rayon maximal
+     */
     public BouncingBall(double x, double y, double r) {
         super(x, y);
 
@@ -28,12 +35,11 @@ public class BouncingBall extends Entity {
         this.renderer = new BouncingBallRenderer(this);
     }
 
-
     /**
-     * Fonction appelée à chaque frame pour mettre à jour les attributs de
-     * l'entité
+     * {@inheritDoc}
      *
-     * @param dt Delta-Temps en secondes
+     * On veut que les bouncing balls tombent comme sous l'effet de la gravité
+     * donc on inclut l'effet d'une accélération en y.
      */
     @Override
     public void tick(double dt) {
@@ -46,14 +52,28 @@ public class BouncingBall extends Entity {
         y += dt * vy;
     }
 
+    /**
+     * Méthode qui simule un rebond parfait sur une surface verticale
+     * en inversant le signe de la vitesse horizontale
+     */
     public void horizontalBounce() {
         this.vx = -this.vx;
     }
 
+    /**
+     * Getter de color (entier 0-3)
+     *
+     * @return this.color
+     */
     public int getColor() {
         return color;
     }
 
+    /**
+     * Getter de radius
+     *
+     * @return this.radius
+     */
     public double getRadius() {
         return radius;
     }

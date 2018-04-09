@@ -1,5 +1,8 @@
 package Model;
 
+/**
+ * Quatrième niveau du jeu, qui nécessite d'utiliser des shields pour passer de très grands VerticalBars
+ */
 public class Level4 extends Level {
 
     public Level4(double screenWidth, double screenHeight) {

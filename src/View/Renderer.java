@@ -14,7 +14,7 @@ public abstract class Renderer {
     public abstract void draw(Level level, GraphicsContext context);
 
     /**
-     * Converti un numéro de couleur 0 à 3 en une couleur de JavaFX
+     * Converti un numéro de couleur 0 à 4 en une couleur de JavaFX
      *
      * @param color le numéro de couleur
      * @return la couleur associée

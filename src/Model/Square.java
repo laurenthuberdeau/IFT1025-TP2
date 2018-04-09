@@ -15,6 +15,13 @@ public class Square extends Obstacle {
     // Temps depuis le dernier changement de couleur
     private double timeSinceColorChange = 0;
 
+    /**
+     * Constructeur du carré, initialise renderer
+     *
+     * @param x Position horizontale
+     * @param y Position verticale
+     * @param longueur Dimension du carré
+     */
     public Square(double x, double y, double longueur) {
         super(x, y);
 

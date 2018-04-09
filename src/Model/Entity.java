@@ -14,6 +14,12 @@ public abstract class Entity {
     protected double x, y;
     protected Renderer renderer;
 
+    /**
+     * Constructeur de Entity
+     *
+     * @param x position horizontale dans le niveau
+     * @param y position verticale dans le niveau
+     */
     public Entity(double x, double y) {
         this.x = x;
         this.y = y;

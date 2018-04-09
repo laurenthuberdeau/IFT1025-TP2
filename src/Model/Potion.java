@@ -7,12 +7,18 @@ import javafx.scene.shape.Shape;
 /**
  * Item : Potion magique.
  * 
- * Fait changer la sorcière de couleur
+ * Fait changer la sorcière de couleur (aléatoire)
  */
 public class Potion extends Item {
 
     private boolean used = false;
 
+    /**
+     * Constructeur de la potion, initialise renderer
+     *
+     * @param x Position horizontale
+     * @param y Position verticale
+     */
     public Potion(double x, double y) {
         super(x, y);
 
@@ -43,6 +49,10 @@ public class Potion extends Item {
                 getHeight());
     }
 
+    /**
+     * Une collision avec la potion fait changer la couleur du joueur.
+     * Le statut "used" et l'affichage de la potion sont mis à jour.
+     */
     @Override
     public void handleCollision(Player player, Game game) {
         used = true;

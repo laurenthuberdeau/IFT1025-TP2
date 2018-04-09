@@ -11,6 +11,12 @@ import javafx.scene.shape.Shape;
  */
 public class Mushroom extends Item {
 
+    /**
+     * Constructeur du champignon, initialise renderer
+     *
+     * @param x Position horizontale
+     * @param y Position verticale
+     */
     public Mushroom(double x, double y) {
         super(x, y);
 

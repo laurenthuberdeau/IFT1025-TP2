@@ -55,6 +55,11 @@ public class GrowingCircle extends Obstacle {
         return new Circle(getX(), getY(), currentRadius);
     }
 
+    /**
+     * Getter de currentRadius
+     *
+     * @return this.currentRadius
+     */
     public double getCurrentRadius() {
         return currentRadius;
     }

@@ -3,6 +3,10 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe Game - Classe principale du côté modèle, dont une instance
+ * sera initialisé par le contrôleur à chaque niveau du jeu.
+ */
 public class Game {
 
     private Level level;
@@ -107,14 +111,27 @@ public class Game {
         return entities;
     }
 
+    /**
+     * Getter de level
+     *
+     * @return this.level
+     */
     public Level getLevel() {
         return level;
     }
 
+    /**
+     * Méthode qui fait "sauter" le joueur
+     */
     public void jump() {
         player.jump();
     }
 
+    /**
+     * Méthode appelée lorsque le joueur a touché un obstacle d'une couleur différente,
+     * ce qui fait disparaitre l'affichage normal du joueur
+     * qui explose en 100 instances de bouncingBalls.
+     */
     public void lose() {
         if (!this.gameOver) {
             this.gameOver = true;
@@ -125,6 +142,9 @@ public class Game {
         }
     }
 
+    /**
+     * Méthode appelée lorsque le joueur a terminé le niveau avec succès
+     */
     public void win() {
         this.hasWon = true;
         this.gameOver = true;

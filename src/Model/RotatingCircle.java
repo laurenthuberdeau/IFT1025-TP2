@@ -23,6 +23,14 @@ public class RotatingCircle extends Obstacle {
     // Temps depuis le dernier changement de couleur
     private double timeSinceColorChange = 0;
 
+    /**
+     * Construction de Rotating Circle
+     *
+     * @param x Position horizontale dans le niveau
+     * @param y Position verticale dans le niveau
+     * @param circleRadius Rayon du cercle affiché
+     * @param pathRadius Rayon sur lequel le cercle se déplace
+     */
     public RotatingCircle(double x, double y, double circleRadius, double pathRadius) {
         super(x, y);
 
@@ -61,6 +69,11 @@ public class RotatingCircle extends Obstacle {
         return new Circle(getX(), getY(), getCircleRadius());
     }
 
+    /**
+     * Getter de circleRadius
+     *
+     * @return le rayon du cercle
+     */
     public double getCircleRadius() {
         return this.circleRadius;
     }

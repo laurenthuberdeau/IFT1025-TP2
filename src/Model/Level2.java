@@ -1,5 +1,8 @@
 package Model;
 
+/**
+ * Deuxième niveau du jeu, introduit les obstacles de type VerticalBar
+ */
 public class Level2 extends Level {
 
     public Level2(double screenWidth, double screenHeight) {

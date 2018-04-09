@@ -1,5 +1,9 @@
 package Model;
 
+/**
+ * Cinquième niveau du jeu.
+ * La plupart des obstacles sont en mouvement, ce qui fait en sorte que le joueur n'a pas de point de repère fixe.
+ */
 public class Level5 extends Level {
 
     public Level5(double screenWidth, double screenHeight) {

@@ -30,6 +30,11 @@ public class Player extends Entity {
         this.renderer = new PlayerRenderer(this);
     }
 
+    /**
+     * Getter de radius
+     *
+     * @return this.radius
+     */
     public double getRadius() {
         return radius;
     }
@@ -63,6 +68,11 @@ public class Player extends Entity {
         }
     }
 
+    /**
+     * Getter de color (entier 0-4)
+     *
+     * @return this.color
+     */
     public int getColor() {
         return color;
     }
@@ -88,18 +98,38 @@ public class Player extends Entity {
         vy += 200;
     }
 
+    /**
+     * Initialise une période au cours de laquelle les collisions
+     * avec les obstacles ne seront pas prises en compte
+     *
+     * @param invincibilityTimer durée en secondes
+     */
     public void setInvincibilityTimer(double invincibilityTimer){
         this.invincibilityTimer = invincibilityTimer;
     }
 
+    /**
+     * Vérifie si le joueur est présentement invincible
+     *
+     * @return un booléen, vrai si le joueur est invincible
+     */
     public boolean getInvincibility(){
         return !(this.invincibilityTimer == 0);
     }
 
+    /**
+     * Setter de la position verticale du joueur
+     *
+     * @param y position verticale dans le niveau
+     */
     public void setY(double y) {
         this.y = y;
     }
 
+    /**
+     * Fait disparaitre le joueur de l'affichage en lui donnant
+     * un renderer null qui sera ignoré lors de l'affichage
+     */
     public void disappear() {
         this.renderer = null;
     }
