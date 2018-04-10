@@ -79,7 +79,7 @@ public class Game {
 
         // This condition prevents the player from moving after exploding into bouncingBalls,
         // which would cause the view to scroll
-        if (this.gameOver == false){
+        if (!this.gameOver){
             player.tick(dt);
 
             if (player.getY() - player.getRadius() < level.getScroll()) {

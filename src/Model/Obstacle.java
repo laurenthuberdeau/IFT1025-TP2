@@ -1,7 +1,7 @@
 package Model;
 
 /**
- * Model.Obstacle dans un niveau.
+ * Obstacle dans un niveau.
  *
  * Lorsque le joueur entre en collision avec un obstacle, la partie est
  * terminée.

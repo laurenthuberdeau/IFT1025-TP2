@@ -28,7 +28,7 @@ public class Mushroom extends Item {
 
     @Override
     public void tick(double dt) {
-        // Rien à faire
+        // NOP
     }
 
     @Override

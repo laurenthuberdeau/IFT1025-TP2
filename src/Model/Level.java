@@ -95,12 +95,8 @@ public abstract class Level {
     public List<LevelElement> getEntities() {
         List<LevelElement> entities = new ArrayList<>();
 
-        for (LevelElement e : this.obstacles) {
-            entities.add(e);
-        }
-        for (LevelElement e : this.items) {
-            entities.add(e);
-        }
+        entities.addAll(this.obstacles);
+        entities.addAll(this.items);
 
         entities.add(victoryMushroom);
 
