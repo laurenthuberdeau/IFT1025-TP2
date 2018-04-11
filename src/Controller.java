@@ -65,10 +65,24 @@ public class Controller {
     }
 
     /**
-     * Fonction appelée lorsque la barre espace est enfoncée.
+     * Fonction appelée lorsque la barre espace est enfoncée; mouvement du joueur
      */
-    public void spaceTyped() {
+    public void spacePressed() {
         this.game.jump();
+    }
+
+    /**
+     * Fonction qui active le mode de déboguage lorsque le joueur appuie sur tab
+     */
+    public void tabPressed() {
+        this.game.debugModeOn();
+    }
+
+    /**
+     * Fonction qui désactive le mode de déboguage lorsque le joueur relâche la touche tab
+     */
+    public void tabReleased() {
+        this.game.debugModeOff();
     }
 
     /**

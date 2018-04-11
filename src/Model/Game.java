@@ -128,6 +128,20 @@ public class Game {
     }
 
     /**
+     * Méthode qui active le mode de déboguage
+     */
+    public void debugModeOn() {
+        this.player.debugModeOn();
+    }
+
+    /**
+     * Méthode qui désactive le mode de déboguage
+     */
+    public void debugModeOff() {
+        this.player.debugModeOff();
+    }
+
+    /**
      * Méthode appelée lorsque le joueur a touché un obstacle d'une couleur différente,
      * ce qui fait disparaitre l'affichage normal du joueur
      * qui explose en 100 instances de bouncingBalls.

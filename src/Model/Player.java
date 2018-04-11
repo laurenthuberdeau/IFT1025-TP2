@@ -16,6 +16,7 @@ public class Player extends Entity {
     private double ay;
     private double invincibilityTimer;
     private int color = 1;
+    private boolean debugMode;
 
     public Player(double x, double y, double r) {
         super(x, y);
@@ -26,6 +27,7 @@ public class Player extends Entity {
         this.ay = -400;
 
         this.invincibilityTimer = 0;
+        this.debugMode = false;
 
         this.renderer = new PlayerRenderer(this);
     }
@@ -111,10 +113,25 @@ public class Player extends Entity {
     /**
      * Vérifie si le joueur est présentement invincible
      *
-     * @return un booléen, vrai si le joueur est invincible
+     * @return un booléen, vrai si un "shield" est actif (timer non-nul) ou si le mode de déboguage est activé
      */
     public boolean getInvincibility(){
-        return !(this.invincibilityTimer == 0);
+        return (this.invincibilityTimer != 0)||this.debugMode;
+    }
+
+    /**
+     * Méthode qui active le mode de déboguage au niveau du joueur, ce qui le rend invincible
+     * (indépendamment de la variable utilisée pour le shield)
+     */
+    public void debugModeOn() {
+        this.debugMode=true;
+    }
+
+    /**
+     * Méthode qui désactive le mode de déboguage au niveau du joueur
+     */
+    public void debugModeOff() {
+        this.debugMode=false;
     }
 
     /**

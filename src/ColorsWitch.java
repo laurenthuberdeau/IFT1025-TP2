@@ -95,8 +95,16 @@ public class ColorsWitch extends Application {
         scene.setOnKeyPressed((event) -> {
             if (event.getCode() == KeyCode.SPACE) {
                 lastGameOver = 0; // Hide text
+                controller.spacePressed();
+            }
+            if (event.getCode() == KeyCode.TAB) {
+                controller.tabPressed();
+            }
+        });
 
-                controller.spaceTyped();
+        scene.setOnKeyReleased((event) -> {
+            if (event.getCode() == KeyCode.TAB) {
+                controller.tabReleased();
             }
         });
 
