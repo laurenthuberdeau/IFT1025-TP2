@@ -15,6 +15,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
+ * TP2: Copie du jeu Color(Sw|sW)itch
+ * Par Simon Chabot et Laurent Huberdeau
+ *
  * Classe principale. Définit la vue.
  */
 public class ColorsWitch extends Application {
