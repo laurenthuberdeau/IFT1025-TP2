@@ -105,12 +105,6 @@ public class ColorsWitch extends Application {
             }
         });
 
-        scene.setOnKeyReleased((event) -> {
-            if (event.getCode() == KeyCode.TAB) {
-                controller.tabReleased();
-            }
-        });
-
         primaryStage.setTitle("Colors Witch");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);

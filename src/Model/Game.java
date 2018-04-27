@@ -128,17 +128,10 @@ public class Game {
     }
 
     /**
-     * Méthode qui active le mode de déboguage
+     * Méthode qui active/desactive le mode de déboguage
      */
-    public void debugModeOn() {
-        this.player.debugModeOn();
-    }
-
-    /**
-     * Méthode qui désactive le mode de déboguage
-     */
-    public void debugModeOff() {
-        this.player.debugModeOff();
+    public void debugModeToggle() {
+        this.player.debugModeToggle();
     }
 
     /**

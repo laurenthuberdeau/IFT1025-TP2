@@ -72,17 +72,10 @@ public class Controller {
     }
 
     /**
-     * Fonction qui active le mode de déboguage lorsque le joueur appuie sur tab
+     * Fonction qui active/desactive le mode de déboguage lorsque le joueur appuie sur tab
      */
     public void tabPressed() {
-        this.game.debugModeOn();
-    }
-
-    /**
-     * Fonction qui désactive le mode de déboguage lorsque le joueur relâche la touche tab
-     */
-    public void tabReleased() {
-        this.game.debugModeOff();
+        this.game.debugModeToggle();
     }
 
     /**

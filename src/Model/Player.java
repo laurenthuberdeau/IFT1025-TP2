@@ -120,18 +120,11 @@ public class Player extends Entity {
     }
 
     /**
-     * Méthode qui active le mode de déboguage au niveau du joueur, ce qui le rend invincible
+     * Méthode qui active/desactive le mode de déboguage au niveau du joueur, ce qui le rend invincible
      * (indépendamment de la variable utilisée pour le shield)
      */
-    public void debugModeOn() {
-        this.debugMode=true;
-    }
-
-    /**
-     * Méthode qui désactive le mode de déboguage au niveau du joueur
-     */
-    public void debugModeOff() {
-        this.debugMode=false;
+    public void debugModeToggle() {
+        this.debugMode=!this.debugMode;
     }
 
     /**
